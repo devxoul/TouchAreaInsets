@@ -1,5 +1,9 @@
 # TouchAreaInsets
 
+![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg)
+[![Build Status](https://travis-ci.org/devxoul/TouchAreaInsets.svg?branch=master)](https://travis-ci.org/devxoul/TouchAreaInsets)
+[![CocoaPods](http://img.shields.io/cocoapods/v/TouchAreaInsets.svg)](https://cocoapods.org/pods/TouchAreaInsets)
+
 Touch area insets for UIView.
 
 ## At a Glance
