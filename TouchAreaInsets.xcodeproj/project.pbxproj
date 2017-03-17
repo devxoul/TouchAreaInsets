@@ -9,13 +9,29 @@
 /* Begin PBXBuildFile section */
 		033ADF2B1E7BE73200D3C99F /* TouchAreaInsets.h in Headers */ = {isa = PBXBuildFile; fileRef = 033ADF281E7BE73200D3C99F /* TouchAreaInsets.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		033ADF2E1E7BE73A00D3C99F /* TouchAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033ADF2D1E7BE73A00D3C99F /* TouchAreaInsets.swift */; };
+		033ADF361E7BE9FE00D3C99F /* TouchAreaInsetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033ADF351E7BE9FE00D3C99F /* TouchAreaInsetsTests.swift */; };
+		033ADF381E7BE9FE00D3C99F /* TouchAreaInsets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033ADF1C1E7BE65C00D3C99F /* TouchAreaInsets.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		033ADF391E7BE9FE00D3C99F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 033ADF131E7BE65C00D3C99F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 033ADF1B1E7BE65C00D3C99F;
+			remoteInfo = TouchAreaInsets;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		033ADF1C1E7BE65C00D3C99F /* TouchAreaInsets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TouchAreaInsets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		033ADF281E7BE73200D3C99F /* TouchAreaInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchAreaInsets.h; sourceTree = "<group>"; };
 		033ADF2A1E7BE73200D3C99F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		033ADF2D1E7BE73A00D3C99F /* TouchAreaInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchAreaInsets.swift; sourceTree = "<group>"; };
+		033ADF331E7BE9FE00D3C99F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		033ADF351E7BE9FE00D3C99F /* TouchAreaInsetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchAreaInsetsTests.swift; sourceTree = "<group>"; };
+		033ADF441E7BEA4E00D3C99F /* TouchAreaInsetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchAreaInsetsTests.swift; sourceTree = "<group>"; };
+		033ADF461E7BEA4E00D3C99F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +39,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		033ADF301E7BE9FE00D3C99F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				033ADF381E7BE9FE00D3C99F /* TouchAreaInsets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +58,8 @@
 			children = (
 				033ADF271E7BE73200D3C99F /* Sources */,
 				033ADF291E7BE73200D3C99F /* Supporting Files */,
+				033ADF341E7BE9FE00D3C99F /* Tests */,
+				033ADF431E7BEA4E00D3C99F /* TouchAreaInsetsTests */,
 				033ADF1D1E7BE65C00D3C99F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -42,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				033ADF1C1E7BE65C00D3C99F /* TouchAreaInsets.framework */,
+				033ADF331E7BE9FE00D3C99F /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +88,23 @@
 				033ADF2A1E7BE73200D3C99F /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		033ADF341E7BE9FE00D3C99F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				033ADF351E7BE9FE00D3C99F /* TouchAreaInsetsTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		033ADF431E7BEA4E00D3C99F /* TouchAreaInsetsTests */ = {
+			isa = PBXGroup;
+			children = (
+				033ADF441E7BEA4E00D3C99F /* TouchAreaInsetsTests.swift */,
+				033ADF461E7BEA4E00D3C99F /* Info.plist */,
+			);
+			path = TouchAreaInsetsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,18 +139,41 @@
 			productReference = 033ADF1C1E7BE65C00D3C99F /* TouchAreaInsets.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		033ADF321E7BE9FE00D3C99F /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 033ADF3B1E7BE9FE00D3C99F /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				033ADF2F1E7BE9FE00D3C99F /* Sources */,
+				033ADF301E7BE9FE00D3C99F /* Frameworks */,
+				033ADF311E7BE9FE00D3C99F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				033ADF3A1E7BE9FE00D3C99F /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 033ADF331E7BE9FE00D3C99F /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		033ADF131E7BE65C00D3C99F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Suyeol Jeon";
 				TargetAttributes = {
 					033ADF1B1E7BE65C00D3C99F = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					033ADF321E7BE9FE00D3C99F = {
+						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,12 +191,20 @@
 			projectRoot = "";
 			targets = (
 				033ADF1B1E7BE65C00D3C99F /* TouchAreaInsets */,
+				033ADF321E7BE9FE00D3C99F /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		033ADF1A1E7BE65C00D3C99F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		033ADF311E7BE9FE00D3C99F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -147,7 +222,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		033ADF2F1E7BE9FE00D3C99F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				033ADF361E7BE9FE00D3C99F /* TouchAreaInsetsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		033ADF3A1E7BE9FE00D3C99F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 033ADF1B1E7BE65C00D3C99F /* TouchAreaInsets */;
+			targetProxy = 033ADF391E7BE9FE00D3C99F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		033ADF221E7BE65C00D3C99F /* Debug */ = {
@@ -288,6 +379,28 @@
 			};
 			name = Release;
 		};
+		033ADF3C1E7BE9FE00D3C99F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		033ADF3D1E7BE9FE00D3C99F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -308,6 +421,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		033ADF3B1E7BE9FE00D3C99F /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				033ADF3C1E7BE9FE00D3C99F /* Debug */,
+				033ADF3D1E7BE9FE00D3C99F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
