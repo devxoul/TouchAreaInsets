@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+TouchAreaInsets.h"
 
 //! Project version number for TouchAreaInsets.
 FOUNDATION_EXPORT double TouchAreaInsetsVersionNumber;
