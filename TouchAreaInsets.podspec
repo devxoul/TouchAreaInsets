@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TouchAreaInsets'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'Touch area insets for UIView'
   s.homepage         = 'https://github.com/devxoul/TouchAreaInsets'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
