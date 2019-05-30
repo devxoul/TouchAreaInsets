@@ -18,6 +18,11 @@ class Tests: XCTestCase {
     XCTAssertEqual(view.point(inside: CGPoint(x: -5, y: 50), with: nil), false)
     XCTAssertEqual(view.point(inside: CGPoint(x: 105, y: 50), with: nil), false)
     XCTAssertEqual(view.point(inside: CGPoint(x: 50, y: 105), with: nil), false)
+    
+    XCTAssertEqual(view.accessibilityFrame.contains(CGPoint(x: 50, y: -5)), false)
+    XCTAssertEqual(view.accessibilityFrame.contains(CGPoint(x: -5, y: 50)), false)
+    XCTAssertEqual(view.accessibilityFrame.contains(CGPoint(x: 105, y: 50)), false)
+    XCTAssertEqual(view.accessibilityFrame.contains(CGPoint(x: 50, y: 105)), false)
   }
 
   func testTouchArea_withInsets() {
@@ -27,6 +32,11 @@ class Tests: XCTestCase {
     XCTAssertEqual(view.point(inside: CGPoint(x: -5, y: 50), with: nil), true)
     XCTAssertEqual(view.point(inside: CGPoint(x: 105, y: 50), with: nil), true)
     XCTAssertEqual(view.point(inside: CGPoint(x: 50, y: 105), with: nil), true)
+    
+    XCTAssertEqual(view.accessibilityFrame.contains(CGPoint(x: 50, y: -5)), true)
+    XCTAssertEqual(view.accessibilityFrame.contains(CGPoint(x: -5, y: 50)), true)
+    XCTAssertEqual(view.accessibilityFrame.contains(CGPoint(x: 105, y: 50)), true)
+    XCTAssertEqual(view.accessibilityFrame.contains(CGPoint(x: 50, y: 105)), true)
   }
 
 }

@@ -8,6 +8,8 @@
   dispatch_once(&onceToken, ^{
     method_exchangeImplementations(class_getInstanceMethod(self, @selector(pointInside:withEvent:)),
                                    class_getInstanceMethod(self, @selector(_touchAreaInsets_pointInside:withEvent:)));
+    method_exchangeImplementations(class_getInstanceMethod(self, @selector(accessibilityFrame)),
+                                   class_getInstanceMethod(self, @selector(_touchAreaInsets_accessibilityFrame)));
   });
 }
 
@@ -21,13 +23,21 @@
 }
 
 - (BOOL)_touchAreaInsets_pointInside:(CGPoint)point withEvent:(UIEvent *)event {
-  UIEdgeInsets touchAreaInsets = self.touchAreaInsets;
-  CGRect bounds = self.bounds;
-  bounds = CGRectMake(bounds.origin.x - touchAreaInsets.left,
-                      bounds.origin.y - touchAreaInsets.top,
-                      bounds.size.width + touchAreaInsets.left + touchAreaInsets.right,
-                      bounds.size.height + touchAreaInsets.top + touchAreaInsets.bottom);
+  CGRect bounds = [self expandFrame:self.bounds
+                         withInsets:self.touchAreaInsets];
   return CGRectContainsPoint(bounds, point);
+}
+
+- (CGRect)_touchAreaInsets_accessibilityFrame {
+  return [self expandFrame:UIAccessibilityConvertFrameToScreenCoordinates(self.bounds, self)
+                withInsets:self.touchAreaInsets];
+}
+
+- (CGRect)expandFrame:(CGRect)frame withInsets:(UIEdgeInsets)insets {
+  return CGRectMake(frame.origin.x - insets.left,
+                    frame.origin.y - insets.top,
+                    frame.size.width + insets.left + insets.right,
+                    frame.size.height + insets.top + insets.bottom);
 }
 
 @end
